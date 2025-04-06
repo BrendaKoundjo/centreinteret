@@ -1,0 +1,13 @@
+package com.centreinteret.centreinteret.repository;
+
+import com.centreinteret.centreinteret.entities.Centreinteret;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import java.util.List;
+
+@Repository
+public interface CentreInteretRepository extends JpaRepository<Centreinteret,Long> {
+    List<Centreinteret> findByNomContainingIgnoreCase(String nom);
+
+}
