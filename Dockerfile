@@ -1,4 +1,4 @@
 FROM eclipse-temurin:17-jre-jammy
-ARG JAR_FILE=target/centreinteret-0.0.1-SNAPSHOT.jar
+ARG JAR_FILE=target/centreinteret.jar
 COPY ${JAR_FILE} app.jar
 ENTRYPOINT ["java","-jar","/app.jar"]
